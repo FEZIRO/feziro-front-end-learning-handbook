@@ -80,5 +80,4 @@ ES8| async、await异步解决方案<br>Object.entries()<br>Object.values()<br>�
 <br>
 
 ## OSI七层网络模型
-![OSI模型图](https://img-blog.csdnimg.cn/20190105161812494.gif)
-
+![OSI模型图]('/images/images/20190105161812494.png')
