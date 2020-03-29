@@ -79,6 +79,7 @@ ES8| async、await异步解决方案<br>Object.entries()<br>Object.values()<br>�
 
 <br>
 
-## OSI七层网络模型
+## OSI七层网络模型对比图
+"如图片无法加载请在images文件夹下查看"
 ![OSI模型图](https://github.com/FEZIRO/feziro-front-end-learning-handbook/blob/master/images/20190105161812494.png)
 
