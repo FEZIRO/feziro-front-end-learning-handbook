@@ -102,36 +102,46 @@ Array | 实例方法 | `Array.prototype.valueOf()`：求值****<br>`Array.protot
 
 ## Map对象
 
-| 名称 | 方法类型     | 方法 |
-| ---- | ------------ | :--- |
-| Map  | 静态方法     |      |
-| Map  | 参数对象方法 |      |
+任何值（对象或者原始值）都可以作为一个键或一个值
+
+| 名称 | 方法类型 | 方法                                                         |
+| ---- | -------- | :----------------------------------------------------------- |
+| Map  | 实例属性 | `Map.prototype.size`：返回一个Map对象的成员数量              |
+| Map  | 实例方法 | `Map.prototype.get(属性名)`： 返回某个 `Map` 对象中的一个指定元素<br />`Map.prototype.set(属性名，属性值)`： 为 `Map` 对象添加或更新一个指定了键（`key`）和值（`value`）的（新）键值对 <br />`Map.prototype.has(属性名)`：返回一个bool值，用来表明map 中是否存在指定元素.<br />`Map.prototype.clear()`：移除Map对象中的所有元素<br />`Map.prototype.delete(属性名)`：用于移除 `Map` 对象中指定的元素<br />`Map.prototype.entries()`：返回一个新的包含 `[key, value]` 对的Iterator对象，返回的迭代器的迭代顺序与 `Map` 对象的插入顺序相同<br />`Map.prototype.forEach((当前值，属性名，当前对象)=>{})`：以插入顺序对 Map 对象中的每一个键值对执行一次参数中提供的回调函数。<br />`Map.prototype.keys()`：返回一个新的 `**Iterator**` 对象。它包含按照顺序插入 `Map` 对象中每个元素的key值<br />`Map.prototype.values()`：返回一个新的Iterator对象。它包含按顺序插入Map对象中每个元素的value值<br /> |
+| Map  | 静态方法 | `Map([属性名，属性值], []...)`：构造函数                     |
 
 <br/>
 
 ## WeakMap对象
 
-| 名称    | 方法类型     | 方法 |
-| ------- | ------------ | :--- |
-| WeakMap | 静态方法     |      |
-| WeakMap | 参数对象方法 |      |
+键是弱引用的。其键必须是对象，而值可以是任意的。
+
+| 名称    | 方法类型 | 方法                                                         |
+| ------- | -------- | :----------------------------------------------------------- |
+| WeakMap | 静态方法 | `WeakMap([属性名，属性值], []...)`：构造函数                 |
+| WeakMap | 实例方法 | `WeakMap.prototype.get(属性名)`： 返回某个WeakMap 对象中的一个指定元素<br />`WeakMap.prototype.set(属性名，属性值)`： 为WeakMap 对象添加或更新一个指定了键（`key`）和值（`value`）的（新）键值对 <br />`WeakMap.prototype.has(属性名)`：返回一个bool值，用来表明WeakMap 中是否存在指定元素.<br />`WeakMap.prototype.delete(属性名)`：用于移除WeakMap 对象中指定的元素<br /> |
 
 <br/>
 
 ## Set对象
 
-| 名称 | 方法类型     | 方法 |
-| ---- | ------------ | :--- |
-| Set  | 静态方法     |      |
-| Set  | 参数对象方法 |      |
+Set允许你存储任何类型的唯一值，无论是[原始值](https://developer.mozilla.org/zh-CN/docs/Glossary/Primitive)或者是对象引用
+
+| 名称 | 方法类型 | 方法                                                         |
+| ---- | -------- | :----------------------------------------------------------- |
+| Set  | 静态属性 | `Set([值1，值2...])`：构造函数                               |
+| Set  | 实例属性 | `Set.protoType.size`：返回set对象元素个数                    |
+| Set  | 实例方法 | `Set.prototype.add(值)`： 向一个 Set 对象的末尾添加一个指定的值 <br />`Set.prototype.has(值)`：返回一个布尔值来指示对应的值value是否存在Set对象中<br />`Set.prototype.clear()`：清空一个 Set对象中的所有元素<br />`Set.prototype.delete(值)`：从一个 Set对象中删除指定的元素<br />`Set.prototype.entries()`：返回一个新的迭代器对象 ，这个对象的元素是类似 [value, value] 形式的数组<br />`Set.prototype.forEach((当前值，属性名，当前对象)=>{})`：根据集合中元素的插入顺序，依次执行提供的回调函数<br />`Set.prototype.values()`：返回一个 Iterator对象，该对象按照原Set 对象元素的插入顺序返回其所有元素。<br /> |
 
 <br/>
 
 ## WeakSet对象
 
-| 名称    | 方法类型     | 方法 |
-| ------- | ------------ | :--- |
-| WeakSet | 静态方法     |      |
-| WeakSet | 参数对象方法 |      |
+**`WeakSet`** 对象允许你将*弱保持对象*存储在一个集合中
+
+| 名称    | 方法类型 | 方法                                                         |
+| ------- | -------- | :----------------------------------------------------------- |
+| WeakSet | 静态方法 | WeakSet()：构造函数                                          |
+| WeakSet | 实例方法 | `WeakSet.prototype.add(值)`：在WeakSet对象的最后一个元素后添加新的对象<br />`WeakSet.prototype.delete(值)`：从 WeakSet 对象中移除指定的元素<br />`WeakSet.prototype.has(值)`：根据 WeakSet 是否存在相应对象返回布尔值<br /> |
 
 <br/>
