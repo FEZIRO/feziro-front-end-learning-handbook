@@ -101,11 +101,7 @@
 | ES7  | 求幂运算符（**）<br>新增Array.prototype.includes()方法       |
 | ES8  | async、await异步解决方案<br>Object.entries()<br>Object.values()<br>Object.getOwnPropertyDescriptors获取对象的属性描述符<br>字符串填充padStart()、padEnd() |
 
-
-
 <br>
-
-
 
 
 
@@ -645,3 +641,66 @@ function throttle (handle, wait) {
 ## html5中可以省略结束标记的元素有
 
 dd、dt、li、p、optgroup、option、rt、rp、thread、tfoot、tr、td、th
+
+
+
+## img标签title和alt区别
+
+| 名称                | 区别                                       |
+| ------------------- | ------------------------------------------ |
+| title               | 因为某种原因不能加载时在页面显示的提示信息 |
+| frame（不推荐使用） | 因为某种原因不能加载时在页面显示的提示信息 |
+
+
+
+## Flex布局父元素和子元素属性
+
+父元素
+
+| 属性            | 含义                         | 值                                                           |
+| --------------- | ---------------------------- | ------------------------------------------------------------ |
+| flex-deirection | 设置主轴方向                 | row（默认）<br />row-reverse<br />column<br />column-reverse |
+| Flex-wrap       | 设置子项是否折叠             | nowrap（默认）<br />wrap<br />wrap-reverse                   |
+| justify-content | 设置子项在主轴的对齐方式     | flex-start（默认）<br />flex-end<br />center<br />space-between<br />space-around<br />space-evenly |
+| align-items     | 设置子项在副轴的对齐方式     | stretch（默认）<br />center<br />flex-start<br />flex-end<br />baseline |
+| Align-content   | 设置多行子项在副轴的对齐方式 | stretch（默认）<br />flex-start<br />flex-end<br />center<br />space-between<br />space-around<br />space-evenly |
+
+
+
+子元素
+
+| 属性        | 含义                                                        | 值                                                           |
+| ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
+| Flex-       | 以主轴排序，设置数值越小越靠前                              | 0（默认）<br />整数                                          |
+| flex-shrink | 以主轴方向，设置子项目被挤压时的收缩比例                    | 1（默认）<br />数值                                          |
+| flex-grow   | 以主轴方向，设置子项目在有剩余地方时的扩张比例              | 0（默认）<br />数值                                          |
+| flex-basis  | 替代子项目的width属性                                       | auto（默认）<br />数值                                       |
+| flex        | flex-grow，flex-shrink，flex-basis的缩写                    | none<br />auto<br />数值，数值，数值                         |
+| align-self  | 覆盖父元素的align-items，可单独设置子项目在副轴上的对齐方式 | auto（默认）<br />stretch<br />center<br />flex-start<br />flex-end<br />baseline |
+
+
+
+## Gird布局父元素和子元素属性
+
+父元素
+
+| 属性                                          | 含义                                                         | 值                                                           |
+| --------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| grid-template-columns<br />grid-template-rows | 设置行高和列宽                                               | **数值**，如100px,100px,100px,100px<br />**百分比（总100%）**，如25% 25% 25% 25%<br />**repeat (重复个数, 重复值)**，如repeat(3 , 33%)，repeat(2, 100px 100px)<br />**fr**，如50px 3fr 1fr 2fr，结合px使用，剩余空间按照fr进行分配<br />**minmax(最小值, 最大值)**，如150px 1fr 1fr minmax(50px, 150px)，该列/行的大小会在剩余空间的长度范围内。<br />**auto**，如100px auto 130px 100px，由浏览器自己决定长度<br />**指定网格线名字**，如[c1] 100px [c2] 100px [c1] ，使用方括号，指定每一根网格线的名字，方便以后的引用 |
+| grid-gap                                      | 设置行/列间距<br />**grid-row-gap** 属性、**grid-column-gap** 属性的简写 | 单位数值，如grid-row-gap:10px、 grid-column-gap:20px 等价于grid-gap:10px 20px（最新标准可去掉gird字符） |
+| grid-template-areas                           | 定义区域                                                     | 字符串，<br />如 'a a a a '   <br />     'b b b b ' <br />     'd e . g '（如果某些区域不需要利用，则使用" . "表示） |
+| grid-auto-flow                                | 设置放置顺序                                                 | row（默认）<br />column                                      |
+| place-items                                   | 设置子项目水平和垂直位置<br />**justify-items（水平位置）** 属性、**align-items（垂直位置）** 属性的合并缩写 | start：对齐单元格的起始边缘<br />end：对齐单元格的结束边缘<br />center：单元格内部居中 <br />stretch：拉伸，项目大小没有指定时-占满单元格的整个宽度（默认值） |
+| place-content                                 | 设置整个内容在容器中的位置                                   | start - 对齐容器的起始边框<br />end - 对齐容器的结束边框<br />center - 容器内部居中<br />stretch - 项目大小没有指定时，拉伸占据整个网格容器<br />space-around - 每个项目两侧的间隔相等。所以，项目之间的间隔比项目与容器边框的间隔大一倍<br />space-between - 项目与项目的间隔相等，项目与容器边框之间没有间隔<br />space-evenly - 项目与项目的间隔相等，项目与容器边框之间也是同样长度的间隔。 |
+| grid-auto-columns<br />grid-auto-rows         | 设置超出部分单元格的大小                                     | 单位数值、百分比或网格可用空间的一部分（单位是fr）           |
+
+
+
+子元素
+
+| 属性                      | 含义                                                         | 值                                                           |
+| ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| grid-column<br />grid-row | 设置项目在容器中的位置<br />grid-column是**grid-column-start**（左边框所在的垂直网格线）、grid-column-end（右边框所在的垂直网格线）的缩写<br />grid-row是**grid-row-start**（上边框所在的水平网格线）、**grid-row-end**（下边框所在的水平网格线）的缩写 | grid-column: 1 / 3;  <br /> grid-row: 1 / 2<br />等于<br />grid-column-start: 1;<br />grid-column-end: 3; <br />grid-row-start: 1; <br />grid-row-end: 2;            ——————————————— |
+| grid-area                 | 设置项目在**容器**中的区域位置                               | 字符                                                         |
+| place-self                | 设置项目**在单元格内的位置**，只作用于单个项目,能覆盖place-items的值 | start：对齐单元格的起始边缘<br />end：对齐单元格的结束边缘<br />center：单元格内部居中 <br />stretch：拉伸，项目大小没有指定时-占满单元格的整个宽度（默认值） |
+
