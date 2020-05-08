@@ -1,10 +1,8 @@
-#  前端知识对比手册（持续更新...）
+#  个人整理的前端知识对比手册（持续更新...）
 
-#### 以对比的方式记录一些容易混淆或者迷惑的前端特性和概念
+#### 主要以表格对比的方式记录一些容易混淆或迷惑的前端特性和概念
 
-（ 整理by FEZIRO，内容参考from MDN Web Docs、掘金、知乎、CSDN、segmentfault ）
-
-
+（知识内容参考来源： MDN Web Docs、掘金、知乎、CSDN、segmentfault、公众号等 ）
 
 - HTTP网络知识对比手册
 - HTML-CSS-Javascript知识对比手册
